@@ -13,18 +13,17 @@
     <p>Hi there! Welcome to my blog!</p>
     <p>It works!</p>
 
-    <article>
-        <h2><a href="">My first post</a></h2>
-        <p>Hello world, welcome to my website. This is my first post.</p>
-    </article>
+{%for post in posts%}
+<article>
+    <h2><a href="">{{post.title}}</a></h2>
+    <p>{{post.text}}</p>
+</article>
 
-    <article>
-        <time>published: 30.09.2023, 13:00</time>
-        <h2><a href="">CV - curriculum vitae</a></h2>
-        <p>There you can find some information about me.</p>
-    </article>
+<article>
+    <time>published: {{post.published_date}}</time>
+</article>
+{%endfor%}
 
-    <time>published: 30.09.2023, 13:00</time>
 </body>
 
 </html>
